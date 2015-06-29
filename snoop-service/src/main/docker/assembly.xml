@@ -29,9 +29,9 @@ THE SOFTWARE.
    <fileSets>
       <fileSet>
          <directory>${project.basedir}/target</directory>
-         <outputDirectory>/opt/jboss/wildfly/standalone/deployments/</outputDirectory>
+         <outputDirectory>/usr/local/glassfish4/glassfish/domains/domain1/autodeploy</outputDirectory>
          <includes>
-            <include>snoop-service-1.0.0-SNAPSHOT.war</include>
+            <include>snoop-service-1.1.0-SNAPSHOT.war</include>
          </includes>
       </fileSet>
    </fileSets>

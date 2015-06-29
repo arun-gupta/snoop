@@ -18,17 +18,17 @@
    <dependencies>
 
       <!-- Needed until Java EE 8 -->
-      <!--      <dependency>-->
-      <!--         <groupId>javax.mvc</groupId>-->
-      <!--         <artifactId>javax.mvc-api</artifactId>-->
-      <!--         <version>1.0-edr1</version>-->
-      <!--      </dependency>-->
-      <!--      <dependency>-->
-      <!--         <groupId>com.oracle.ozark</groupId>-->
-      <!--         <artifactId>ozark</artifactId>-->
-      <!--         <version>1.0.0-m01</version>-->
-      <!--         <scope>runtime</scope>-->
-      <!--      </dependency>  -->
+      <dependency>
+         <groupId>javax.mvc</groupId>
+         <artifactId>javax.mvc-api</artifactId>
+         <version>1.0-edr1</version>
+      </dependency>
+      <dependency>
+         <groupId>com.oracle.ozark</groupId>
+         <artifactId>ozark</artifactId>
+         <version>1.0.0-m01</version>
+         <scope>runtime</scope>
+      </dependency>  
    </dependencies>   
 
    <profiles>
@@ -44,9 +44,9 @@
                      <images>
                         <image>
                            <alias>user</alias>
-                           <name>ivargrimstad/snoop-service</name>
+                           <name>ivargrimstad/snoop-service:glassfish</name>
                            <build>
-                              <from>ivargrimstad/ubuntu-wildfly</from>
+                              <from>library/glassfish:4.1-jdk8</from>
                               <assembly>
                                  <descriptor>assembly.xml</descriptor>
                                  <basedir>/</basedir>
